@@ -3,14 +3,15 @@ nav{
     height: 30px;
     text-align: center;
     padding: 15px;
+    margin-bottom: 30px;
 }
 p{
     padding: 5px;
 }
 .m{
-   padding: 20px;
+   padding: 18px;
    color: #778899;
-   font-size: 13pt;
+   font-size: 11pt;
    font-weight: bold;
 }
 .m1{   
@@ -18,33 +19,63 @@ p{
    font-size: 11pt;
    font-weight: bold;
 }
-.t{
-    
-display: table;
- width: 100%;
-  height: 600px;
-  text-align: center;  
-  font-size: 28pt;
-  font-weight: bold;
-  color: rgba(95, 140, 45, 0.9)
+.t{    
+    width: 18em;
+    font-size: 28pt;
+    font-weight: bold;
+    color: rgba(95, 140, 45, 0.9);
 }
 .contact{
-    
-display: table;
- width: 100%;
-  height: 600px;
-  text-align: center;  
-  font-size: 11pt;
-  font-weight: bold;
-  color: rgba(36, 0, 134, 0.9)
+    width: 35em;
+    font-size: 11pt;
+    font-weight: bold;
+    color: rgba(36, 0, 134, 0.9);
 }
-.t div,.contact div{
-    display: table-cell;
-    vertical-align: middle;
+.t,.contact{
+    
+    padding: 1em 1.5em;
+    margin: 50vh auto 0;
+    transform: translateY(-50%);
+    text-align: center;
 }
 .row{
     padding: 8px;
 }
 video{
     align-content: center;
+}
+.release_version{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 19pt;
+    font-weight: bold;
+    color: rgb(122, 217, 255);
+}
+
+.release_date{     
+    padding-top: 20px;
+    font-size: 9pt;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+.release_add, .release_edit, .release_del, .release_fix{     
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.release_add{    
+    color: rgb(122, 255, 161);
+}
+
+.release_edit{
+    color: rgb(255,228,122);
+}
+.release_fix{
+    color: rgb(255,160,122);
+}
+
+.release_del{
+    color: rgb(255,122,151);
 }
