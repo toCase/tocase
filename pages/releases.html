@@ -8,6 +8,17 @@
         <link href="../css/tocase.css" rel="stylesheet">
         <script src="../js/jquery.js"></script>
         <script src="../js/bootstrap.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-101952073-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
         
     </head>
     <body>
@@ -37,6 +48,53 @@
             </div> 
 
             <!--body -->
+
+            <!--0.5.15-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.15</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">27.08.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Редактор групп.</li>
+                        <li>Управление закупками.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Полностью переработаны заказы поставщикам.</li>
+                        <li>Изменен порядок создания самостоятельных расходных накладных, добавлен этап автоматического создания и привязки листа доставки товара.</li>
+                        <li>Изменены правила удаления расходных накладных. Теперь при удалении основного документа, привязанные документы также полностью удаляются.</li>
+                        <li>В разделе Производство изменена работа со спецификациями.</li>
+                        <li>Изменен порядок подтверждения заявкой от покупателей. Теперь первым этапом подтверждения заявки является выбор склада списания товара.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>В финансовых операциях исправленл управление основной таблицей через клавиатуру.</li>
+                        <li>Исправлен финансовый отчет "Изъятия".</li>
+                        <li>Исправлены отчеты в разделе Продаж. Добавлены итоговы строки.</li>
+                        <li>В форме Платежа исправлен пересчет суммы. При изменении счета и соответственно валюты, сумма не пересчитывалась.</li>
+                        <li>Внесены исправления в форму ведомости Заработной платы. После формирования документа, боковая функциональная панель не активировалась.</li>
+                        <li>Внесены изменения в работу учет Производства. При создании отчета через спецификацию программа иногда добавляла строки с нулевым количеством.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div>
+
 
             <!--0.5.14-->
             <div class="row">
