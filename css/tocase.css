@@ -79,3 +79,7 @@ video{
 .release_del{
     color: rgb(255,122,151);
 }
+.writer{
+    height: 50px;
+    border-bottom: 1px solid black;
+}
