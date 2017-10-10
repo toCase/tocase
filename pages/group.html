@@ -22,7 +22,7 @@
         
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluids">
             
          <!--header-->
             <div class="row">
@@ -46,38 +46,35 @@
                     </nav>
                 </header>            
             </div> 
-
+        
         <!--body -->
             <div class="row">
                 <div  class="col-md-8 col-md-offset-2">
-                    <h1 align="center">Справочники</h1>
-                    <p>Справочники - вспомогательные объекты, которые имеют одинаковую структуру и списочный характер. 
-                    Каждый элемент в справочнике имеет уникальный идентификатор, название и соответствующие ему параметры. 
-                    Некоторые справочники (<a class="m1" href="materials.html" align="center">Материалы</a>,
-                    <a class="m1" href="products.html" align="center">Товары</a>,<mark>Контагенты</mark>) могут быть 
-                    разделеные на группы.</p>
+                    <h1 align="center">Группировка</h1>
+                    <p>toCase предлагает произвольную деревовидную группировку следующих справочников:</p>
+                    <ul>
+                        <li>материалы</li>            
+                        <li>товары</li>
+                        <li>контрагенты</li>
+                        <li>клиенты</li>
+                    </ul>
+                    <p>Чтобы вызвать форму редактирования групп нужно дважды кликнуть на дереве групп окне соответствующего справочника.</p>
+                    <img src="../img/group_00.png"/>
+                    <p>Для добавления, редактирования или удаления групп нужно правой клавишей мыши вызвать контекстное меню и выбрать соответствующее действие. Если к выбранной на удаление группе принадлежат позиции из соответствующего справочника, такую группу удалить невозможно. Соответсвенно, чтобы удалить какую-либо группу например, в справочнике "Материалов", из нее сначала нужно убрать все материалы.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-md-offset-4">
-                    <ul>
-                        <li><a class="m1" href="materials.html" align="center">Материалы</a></li>
-                        <li><a class="m1" href="products.html" align="center">Товары</a></li>
-                        <li>Артикулы</li>
-                        <li><a class="m1" href="units.html" align="center">Единицы измерения</a></li>
-                        <li><a class="m1" href="sklads.html" align="center">Склады</a></li>
-                        <li><a class="m1" href="firms.html" align="center">Контрагенты</a></li>
-                        <li><a class="m1" href="client.html" align="center">Клиенты</a></li>
-                        <li><a class="m1" href="group.html" align="center">Группы</a></li>
-                        <li>Виды доставки</li>
-                        <li>Виды платежей</li>
-                        <li>Способ совершения платежа</li>
-                        <li>Денежные единицы</li>
-                        <li>Виды цен</li>
-                        <li>Ценообразование</li>                        
-                    </ul>
-                </div>                
+                <div  class="col-md-8 col-md-offset-2">
+                    <video width="864" height="486" loop="loop" autoplay="autoplay" src="../video/group.webm">
+                    Ваш браузер не поддерживает это видео.
+                    </video>
+                </div>
             </div>            
+            <div class="row">
+                <div  class="col-md-8 col-md-offset-2">                    
+                    <p><a class="m1" href="sprav.html">Справочники</a></p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
