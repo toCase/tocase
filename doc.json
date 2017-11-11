@@ -1,12 +1,6 @@
-[
-	"Bill" {
-		"email": "2058931@gmail.com",
-		"date": 315354684,
-		"index": "13535dfd3fs3f4s8fsdf43d83f4s3df4"
-	}
-	"James" {
-		"email": "3054648@gmail.com",
-		"date": 35344,
-		"index": "13sdfs55%dfe52rnsasd535dfd3fs3f4s"
-	}
-]
+{
+	"doc" : [
+		{"name":"Bill", "email": "2058931@gmail.com", "date": 315354684, "index": "13535dfd3fs3f4s8fsdf43d83f4s3df4"},
+		{"name":"James", "email": "3054648@gmail.com", "date": 35344, "index": "13sdfs55%dfe52rnsasd535dfd3fs3f4s"}
+	]
+}
