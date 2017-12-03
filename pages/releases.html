@@ -1,937 +1,949 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta http-equip="Content-Tipe" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Релизы приложения toCase</title>
-    <meta name="description" content="График релизов приложения управления хозяйственной деятельностью toCase"/>
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/tocase.css" rel="stylesheet">
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.js"></script>
+    <head>
+        <meta http-equip="Content-Tipe" content="text/html; charset=UTF-8"/>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101952073-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-101952073-1');
-    </script>
-    
-</head>
-<body>
-    <div class="container-fluid">
+        <title>Релизы приложения toCase</title>
+        <meta name="description" content="График релизов приложения управления хозяйственной деятельностью toCase"/>        
+        <meta name="keywords" content="toCase,программа,управление,складом,производством,финансами"/>        
         
-    <!--header-->
-        <div class="row">
-            <header class="col-md-4">
-                <nav>
-                    <a class="m" href="features.html" align="center">Features</a>
-                    <a class="m" href="#" align="center">Release Notes</a>
-                    <a class="m" href="downloads.html" align="center">Download</a>
-                </nav>
-            </header>
-            <header class="col-md-2 col-md-offset-1">
-                <nav>
-                    <a href="../index.html"><img src="../img/about.png" swidth="48" height="48" alt="toCase"></a>
-                </nav>
-            </header>
-            <header class="col-md-4 col-md-offset-1">
-                <nav>
-                    <a class="m" href="help.html" align="center">Help</a>                        
-                    <a class="m" href="contact.html" align="center">Contact</a>                        
-                    <a class="m" href="about.html" align="center">About</a>
-                </nav>
-            </header>            
-        </div> 
+
+        <!-- Bootstrap CSS -->               
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        
+        <!-- toCase CSS -->
+        <link href="../css/tocase.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101952073-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-101952073-1');
+        </script>        
+    </head>
+    <body>
+        <div class="container-fluid">            
+        <!--header-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">toCase</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Особенности</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Release Notes<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="downloads.html">Скачать</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Помощь</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">О проекте</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>                
+        </nav> 
 
 
-        <!--body -->
-        <!--0.5.23-->    
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.23</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">2.11.2017</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Исправлено сохрание Платежа. При обновление данных сохранение сохранение выполнялось не всегда.</li>
-                    <li>В расходных накладных исправлен автоматический расчет и обновление статуса документа.</li>
-                    <li>В расходных накладных исправлен порядок удаления товаров из документа. После исправления товары корректно "возвращаются" в заявку для повторной обработки.</li>
-                    <li>В карточке справочника "Товары" исправлена функция проверки возможности удаления.</li>
-                </ul>                        
-            </div>             
-            <div class="col-md-6">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>В форме расходной накладной, при обработке товаров из заявки покупателя происходит поиск приходных документов-источников с положительным остатком того или иного товара. Механизм поиска этих документов исправлен (внесены корректировки по дате документов) и ускорен.</li>
-                    <li>Такое же изменение введено и в форме выбора приходных документов, при поиске товара во время оформления расходных документов.</li>
-                    <li>Расширена система логирования в документах раздела "Производство".</li>
-                    <li>Из разделов базы данных, которые хранят прайс-листы удалены позиции с нулевыми ценами. Благодаря, изменению работы с ценами удалось значительно увеличись скорость обработки прайс-листов и сократить объем хранимой информации.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div> 
-        <!--0.5.22-->    
-        <div class="row">
+            <!--body -->
+            <!--0.5.23-->    
+            <div class="row">
                 <div class="col-md-2 col-md-offset-5">
-                    <div class="release_version" align="center">v 0.5.22</div>
+                    <div class="release_version" align="center">v 0.5.23</div>
                 </div>
                 <div class="col-md-3 col-md-offset-2">
-                    <div class="release_date">24.10.2017</div>
+                    <div class="release_date">2.11.2017</div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="release_add">Добавлено</div>
-                        <ul>
-                            <li>Добавлен справочник "Источники привлечения клиентов".</li>
-                            <li>В раздел продаж добавлен отчет "Источники привлечения клиентов".</li>
-                        </ul>                        
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Исправлено сохрание Платежа. При обновление данных сохранение сохранение выполнялось не всегда.</li>
+                        <li>В расходных накладных исправлен автоматический расчет и обновление статуса документа.</li>
+                        <li>В расходных накладных исправлен порядок удаления товаров из документа. После исправления товары корректно "возвращаются" в заявку для повторной обработки.</li>
+                        <li>В карточке справочника "Товары" исправлена функция проверки возможности удаления.</li>
+                    </ul>                        
                 </div>             
                 <div class="col-md-6">
                     <div class="release_edit">Изменено</div>
                     <ul>
-                        <li>Изменена карточка клиента и форма заявки от покупателя. Добавлена возможность фиксировать источник привечения.</li>
-                        <li>Во всех таблицах справочников принята единая цвеховая схема.</li>
-                        <li>Переработано "Ценообразование". Предыдущая таблица цен показала низкие показатели 
-                            по скорости загрузки. Переработаные функции и оптимизированные запросы позволяют в 
-                            несколько раз ускорить работу.
-                        </li>
+                        <li>В форме расходной накладной, при обработке товаров из заявки покупателя происходит поиск приходных документов-источников с положительным остатком того или иного товара. Механизм поиска этих документов исправлен (внесены корректировки по дате документов) и ускорен.</li>
+                        <li>Такое же изменение введено и в форме выбора приходных документов, при поиске товара во время оформления расходных документов.</li>
+                        <li>Расширена система логирования в документах раздела "Производство".</li>
+                        <li>Из разделов базы данных, которые хранят прайс-листы удалены позиции с нулевыми ценами. Благодаря, изменению работы с ценами удалось значительно увеличись скорость обработки прайс-листов и сократить объем хранимой информации.</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div> 
-        <!--0.5.21-->    
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.21</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">20.10.2017</div>
-            </div>
-        </div>
-        <div class="row">                
-            <div class="col-md-6">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Полностью переработан редактор отчетов. Переработан ui, добавлены два режима отображения отчета: 
-                        в виде таблицы и готового документа.</li>
-                    <li>Изменен отчет "Реестр платежей по счету". Добавлены фильтры по контрагенту, 
-                        клиенту, направлению платежа.</li>
-                    <li>Такие же фильтры добавлены в "Финансовых операциях".</li>
-                    <li>В "Финансовых операциях" добавлен столбец "Менеджер".</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Функция печати документов не одинаково хорошо работает с разными принтерами, из-за чего оттиски получались не полными. Очерендное исправлени разметки документов.</li>
-                    <li>Исправлен отчет "Изъятие".</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div> 
-        <!--0.5.20-->    
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.20</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">6.10.2017</div>
-            </div>
-        </div>
-        <div class="row">                
-            <div class="col-md-6">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Добавлена возможность отправлять документы из программы по e-mail. Функция работает только с почтовым сервисом google.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Внесены исправления в отчеты раздела Продаж.</li>
-                    <li>Исправлено отображение кол-во товаров по складам в карточке "Товара"</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div> 
-
-
-        <!--0.5.19-->    
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.19</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">29.09.2017</div>
-            </div>
-        </div>
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Введен контроль удаления документов в разделе производства и управления закупками ( собственные заявки, отчеты производства, спецификации). Теперь пользователи без административных прав не могут безвозвратно удалить эти документы. </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>В связи с созданием статусов документов внесены исправления в отчеты.</li>
-                    <li>Изменен отчет "История товара". Он позволяет отслеживать расход товара  по складу за определенный период по партиям.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Функция печати документов не одинаково хорошо работает с разными принтерами, из-за чего оттиски получались не полными. Исправлено внесением корректировки в разметку документов.</li>                        
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div> 
-
-
-        <!--0.5.18-->    
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.18</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">22.09.2017</div>
-            </div>
-        </div>
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Введен контроль удаления документов в разделе продаж (заявки покупателей, 
-                        расходные накладные и листы доставки). Теперь пользователи без административных прав 
-                        не могут безвозвратно удалить эти документы. </li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Таблица финансовых операций теперь включает информацию о контрагенте.</li>
-                    <li>В форму платежа добавлена возможность быстрого перехода к документу-источнику.</li>
-                    <li>Изменен виджет привязки платежей. Ранее через него можно было только создать 
-                        новый платеж или открыть для редактирования старый. Сейчас можно к 
-                        накладным присоединить ранее созданные платежи (например, авансовый).
-                    </li>
-                    <li>Изменен способ привязки платежей в управлении закупками.</li>
-                    <li>Цены теперь имеют 5 знаков после запятой, а "количество" - 3.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Исправлен виджет фильтрации. В некоторых местах (например: производство или заявки клиентов) 
-                        он отображался частично.</li>
-                    <li>Исправлена форма платежей, которая даже администраторам не давала полностью удалять документы.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div>
-
-        <!--0.5.17-->
-        <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div> 
+            <!--0.5.22-->    
+            <div class="row">
+                    <div class="col-md-2 col-md-offset-5">
+                        <div class="release_version" align="center">v 0.5.22</div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-2">
+                        <div class="release_date">24.10.2017</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="release_add">Добавлено</div>
+                            <ul>
+                                <li>Добавлен справочник "Источники привлечения клиентов".</li>
+                                <li>В раздел продаж добавлен отчет "Источники привлечения клиентов".</li>
+                            </ul>                        
+                    </div>             
+                    <div class="col-md-6">
+                        <div class="release_edit">Изменено</div>
+                        <ul>
+                            <li>Изменена карточка клиента и форма заявки от покупателя. Добавлена возможность фиксировать источник привечения.</li>
+                            <li>Во всех таблицах справочников принята единая цвеховая схема.</li>
+                            <li>Переработано "Ценообразование". Предыдущая таблица цен показала низкие показатели 
+                                по скорости загрузки. Переработаные функции и оптимизированные запросы позволяют в 
+                                несколько раз ускорить работу.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div> 
+            <!--0.5.21-->    
+            <div class="row">
                 <div class="col-md-2 col-md-offset-5">
-                    <div class="release_version" align="center">v 0.5.17</div>
+                    <div class="release_version" align="center">v 0.5.21</div>
                 </div>
                 <div class="col-md-3 col-md-offset-2">
-                    <div class="release_date">9.09.2017</div>
+                    <div class="release_date">20.10.2017</div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-6">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Полностью переработан редактор отчетов. Переработан ui, добавлены два режима отображения отчета: 
+                            в виде таблицы и готового документа.</li>
+                        <li>Изменен отчет "Реестр платежей по счету". Добавлены фильтры по контрагенту, 
+                            клиенту, направлению платежа.</li>
+                        <li>Такие же фильтры добавлены в "Финансовых операциях".</li>
+                        <li>В "Финансовых операциях" добавлен столбец "Менеджер".</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Функция печати документов не одинаково хорошо работает с разными принтерами, из-за чего оттиски получались не полными. Очерендное исправлени разметки документов.</li>
+                        <li>Исправлен отчет "Изъятие".</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div> 
+            <!--0.5.20-->    
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.20</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">6.10.2017</div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-6">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Добавлена возможность отправлять документы из программы по e-mail. Функция работает только с почтовым сервисом google.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Внесены исправления в отчеты раздела Продаж.</li>
+                        <li>Исправлено отображение кол-во товаров по складам в карточке "Товара"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div> 
+
+
+            <!--0.5.19-->    
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.19</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">29.09.2017</div>
                 </div>
             </div>
             <div class="row">                
                 <div class="col-md-4">
                     <div class="release_add">Добавлено</div>
                     <ul>
-                        <li>Введен контроль удаления документов складского учета и платежей. 
-                            Пользователи без административных прав теперь не смогут безвозвратно удалить документ. </li>
+                        <li>Введен контроль удаления документов в разделе производства и управления закупками ( собственные заявки, отчеты производства, спецификации). Теперь пользователи без административных прав не могут безвозвратно удалить эти документы. </li>
                     </ul>
                 </div>
 
                 <div class="col-md-4">
                     <div class="release_edit">Изменено</div>
                     <ul>
-                        <li>Таблица финансовых операций теперь не статична. Платежи и операции по счету
-                        можно открыть для просмотра и редактирования</li>
-                        <li>Добавлена возможность редактирования финансовых операции.</li>
-                        <li>Изменены отчеты из раздела "Платежи".</li>
-                        <li>Изменен отчет "История материала". Ранее записи в отчете были представлены в хронологии 
-                            поступлений и списаний. Теперь отчет имеет представление по партиям, что дает возможность 
-                        контролировать остатки по каждому приходу.</li>
+                        <li>В связи с созданием статусов документов внесены исправления в отчеты.</li>
+                        <li>Изменен отчет "История товара". Он позволяет отслеживать расход товара  по складу за определенный период по партиям.</li>
                     </ul>
                 </div>
 
                 <div class="col-md-4">
                     <div class="release_fix">Исправлено</div>
                     <ul>
-                        <li>Исправлена фатальная ошибка в разделе "Управление закупками". Вылет происходил при 
-                            нажатии "Открыть документ"  из контестного меню, в случае когда папка документов была пустой. </li>                        
+                        <li>Функция печати документов не одинаково хорошо работает с разными принтерами, из-за чего оттиски получались не полными. Исправлено внесением корректировки в разметку документов.</li>                        
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div> 
+
+
+            <!--0.5.18-->    
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.18</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">22.09.2017</div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Введен контроль удаления документов в разделе продаж (заявки покупателей, 
+                            расходные накладные и листы доставки). Теперь пользователи без административных прав 
+                            не могут безвозвратно удалить эти документы. </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Таблица финансовых операций теперь включает информацию о контрагенте.</li>
+                        <li>В форму платежа добавлена возможность быстрого перехода к документу-источнику.</li>
+                        <li>Изменен виджет привязки платежей. Ранее через него можно было только создать 
+                            новый платеж или открыть для редактирования старый. Сейчас можно к 
+                            накладным присоединить ранее созданные платежи (например, авансовый).
+                        </li>
+                        <li>Изменен способ привязки платежей в управлении закупками.</li>
+                        <li>Цены теперь имеют 5 знаков после запятой, а "количество" - 3.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Исправлен виджет фильтрации. В некоторых местах (например: производство или заявки клиентов) 
+                            он отображался частично.</li>
+                        <li>Исправлена форма платежей, которая даже администраторам не давала полностью удалять документы.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div>
+
+            <!--0.5.17-->
+            <div class="row">
+                    <div class="col-md-2 col-md-offset-5">
+                        <div class="release_version" align="center">v 0.5.17</div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-2">
+                        <div class="release_date">9.09.2017</div>
+                    </div>
+                </div>
+                <div class="row">                
+                    <div class="col-md-4">
+                        <div class="release_add">Добавлено</div>
+                        <ul>
+                            <li>Введен контроль удаления документов складского учета и платежей. 
+                                Пользователи без административных прав теперь не смогут безвозвратно удалить документ. </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="release_edit">Изменено</div>
+                        <ul>
+                            <li>Таблица финансовых операций теперь не статична. Платежи и операции по счету
+                            можно открыть для просмотра и редактирования</li>
+                            <li>Добавлена возможность редактирования финансовых операции.</li>
+                            <li>Изменены отчеты из раздела "Платежи".</li>
+                            <li>Изменен отчет "История материала". Ранее записи в отчете были представлены в хронологии 
+                                поступлений и списаний. Теперь отчет имеет представление по партиям, что дает возможность 
+                            контролировать остатки по каждому приходу.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="release_fix">Исправлено</div>
+                        <ul>
+                            <li>Исправлена фатальная ошибка в разделе "Управление закупками". Вылет происходил при 
+                                нажатии "Открыть документ"  из контестного меню, в случае когда папка документов была пустой. </li>                        
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+                </div>    
+
+            <!--0.5.16-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.16</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">2.09.2017</div>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Фильтрация и сортировка документов. Позволяет установить сортировку
+                            и фильтровать документы по ключевым параметрам. Введено во всех разделах, программа запоминает 
+                            последнее состояние.</li>
+                        <li>Добавлена функция предпросмотра и печати расходных накладных и платежных документов.</li>
+                        <li>Добавлен справочник рекламных средств (используется в персональной карточке клиента).</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Изменены предустановленные названия файлов при сохранении документов в *.pdf или *.xls.</li>
+                        <li>Увеличены размеры техстовых полей.</li>
+                        <li>Изменены ценовые модификаторы. Теперь можно вводить дробные значения.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Внесены корректировки в функцию резервного копирования базы данных.</li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div>
+
+            <!--0.5.15-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.15</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">27.08.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Редактор групп.</li>
+                        <li>Управление закупками.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Полностью переработаны заказы поставщикам.</li>
+                        <li>Изменен порядок создания самостоятельных расходных накладных, добавлен этап автоматического создания и привязки листа доставки товара.</li>
+                        <li>Изменены правила удаления расходных накладных. Теперь при удалении основного документа, привязанные документы также полностью удаляются.</li>
+                        <li>В разделе Производство изменена работа со спецификациями.</li>
+                        <li>Изменен порядок подтверждения заявкой от покупателей. Теперь первым этапом подтверждения заявки является выбор склада списания товара.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>В финансовых операциях исправленл управление основной таблицей через клавиатуру.</li>
+                        <li>Исправлен финансовый отчет "Изъятия".</li>
+                        <li>Исправлены отчеты в разделе Продаж. Добавлены итоговы строки.</li>
+                        <li>В форме Платежа исправлен пересчет суммы. При изменении счета и соответственно валюты, сумма не пересчитывалась.</li>
+                        <li>Внесены исправления в форму ведомости Заработной платы. После формирования документа, боковая функциональная панель не активировалась.</li>
+                        <li>Внесены изменения в работу учет Производства. При создании отчета через спецификацию программа иногда добавляла строки с нулевым количеством.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div>
+
+
+            <!--0.5.14-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.14</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">06.07.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>В функцию “Учет заработной платы” добавлена возможность сохранить ведомость в формате Excel (xlsx).</li>
+                        <li>Введена новая система логирования событий.</li>
+                        <li>В административной панели добавлена форма поиска по событиям и активности пользователей (тестовый режим).</li>
+                        <li>Добавлен Spashscreen и иконка программы :)</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>В общих отчетах о взаиморасчетах добавлены итоговые строки.</li>
+                        <li>Открыта возможность установки произвольной суммы по расходной накладной при привязке платежки.</li>
+                        <li>В "Заявках" добавлена возможность отменить решение об отклонении заявки.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Функция резервного копирования базы данных - не все таблицы сохранялись корректно.</li>
+                        <li>В расходной накладной исправлен переход к возвратной накладной - был заблокирован.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div>
+
+            <!--0.5.13-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.13</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">29.06.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Учет заработной платы.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Доступ с платежным документам.</li>
+                        <li>Открыта возможность установки произвольной суммы по расходной накладной при привязке платежки.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Сохранение изменения суммы платежа.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
+            </div>
+
+            <!--0.5.12-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.12</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">20.06.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Добавлен виджет “Платежей документа” позволяющий из конкретного документа просматривать, 
+                            добавлять и управлять произвольным количеством привязанных платежей.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Глобально изменено обновление форм при нажатии F5.</li>
+                        <li>Переработана регистрация контрагентов и изменена форма ввода.</li>
+                        <li>Полностью изменена система управления настройками в части 
+                            поведения и размещения окон и состава основных таблиц.</li>
+                        <li>Из форм оформления и управления платежей убрана строка “Способ оплаты”.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>В расходных накладных и листе доставки исправлено автоматическое заполнение 
+                            адресов и данных клиента.</li>
+                        <li>Исправлена функция обновления в финансовых операциях и платежах 
+                            (с v0.5.6 данные сбивались в первоначальное положение).</li>
+                        <li>В форме платежа исправлена блокировка документа (при открытии завершенной 
+                            сделки документ не блокировался).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.11-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.11</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">7.06.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Трекинг “Новой Почты”.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Информер валют и режим его работы.</li>
+                        <li>Лист доставки.</li>
+                        <li>Отчеты: истории товара, общий по продажам, себестоимости.</li>
+                        <li>Изменен порядок оформления документов продажи, в разделе фестивали.</li>
+                        <li>Изменен порядок оформления возвратов товара.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>В расходный накладных исправлен контроллер статуса документа, 
+                            теперь он работает не только в открытом документе, а и при закрытом документе.</li>
+                        <li>Исправлена форма выбора материалов и товаров при оформлении отчета производства.</li>
+                        <li>Исправлено сохранение карточки владельца (не сохранялось).</li>
+                        <li>Исправлено сохранение цен в прайс-листах (после v 0.5.10 не сохранялось).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.10-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.10</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">25.05.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Справочник “Артикулы”.</li>
+                        <li>Выгрузка частных клиентов в файл Excel.</li>
+                        <li>В карточку клиента добавлена кнопка отображение информации об истории покупок.</li>
+                        <li>Отчет “Розничные каналы”.</li>
+                        <li>Отчет “Продажи магазинов”.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Общие отчеты о движении материалов и товаров (добавлен учет разукомплектации).</li>
+                        <li>Детальные отчеты о движении в разделе Материалы и Товары будут удалены (слишком широкий). 
+                            Вместо них в каждый раздел добавлены отчеты “Поступление” и “Выбытие”.</li>
+                        <li>Для увеличения скорости загрузки прайс-листов изменен порядок загрузки и отображения (тест).</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Сохранение адреса в карточке “Контрагента” и “Клиента”.</li>
+                        <li>Логирование в Собственных заявках и Разукомплектации.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.9-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.9</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">22.05.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Поле “Город” и “Страна” в карточку клиента и фирмы.</li>
+                        <li>поле “Город” и “Страна” в заявку.</li>
+                        <li>Поле “Треко” в заявках.</li>
+                        <li>Контекстный поиск (по первым символам) во все выпадающие списки.</li>
+                        <li>Учет собственных заявок на закупку материалов и товаров.</li>
+                        <li>Вид контрагентов “Фестивали, Ярмарки”.</li>
+                        <li>Учет продаж на выездных мероприятиях выставках, ярмарках (Фестивали).</li>
+                        <li>Учет возврата непроданных товаров на выездных мероприятиях.</li>
+                        <li>Учет отчетов по разукомплектации товаров.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Фильтрация заявок по дате (Новые сверху).</li>
+                        <li>Порядок отображения счетов (в алфавитном порядке.</li>
+                        <li>Добавлены поля в таблице "Клиенты".</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Ошибка при фильтрации “Отчетов производства” по дате.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.8-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.8</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">19.04.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Колонка реклама в таблице частных клиентов.</li>
+                        <li>Тестовые информеры по продажам на дашбоард.</li>
+                        <li>Информер валютных курсов, с возможностью обновление справочника валют.</li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Исправлено создание и сохранение в Excel частичных "входящих платежей".</li>
+                        <li>Исправлена ошибка отображения словаря “Объектов” в форме спецификации.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.7-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.7</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">10.04.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Возможность назначать нескольких ответственных за один счет.</li>
+                        <li>Возможность добавлять несколько платежей к одной накладной.</li>                        
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Исправлена ошибка обработки заявок.</li>
+                        <li>Исправлено сохранение документов в Excel.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.6-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.6</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">6.04.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Отображение колонок в форме “Виды цен”.</li>                        
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Изменена политика блокировки функций в зависимости от прав пользователей.</li>
+                        <li>Изменен отчет “Изъятие средств”.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.5-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.5</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">30.03.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Ошибка блокировки платежного документа.</li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.4-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.4</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">27.03.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                        <li>Добавлена группировка в разделах контрагентов.</li>
+                        <li>Добавлена позиция "Реклама" в карточку клиента.</li>
+                        <li>Добавлены подсказки ко всем кнопками боковых панелей.</li>
+                        <li>Возможность сохранения результатов отчетов в PDF.</li>
+                        <li>Возможность распечатки результатов отчетов.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Отображение результатов при формировании отчетов.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Исправлена критическая ошибка, возникающая при изменении склада в накладной.</li>
+                        <li>Исправлена блокировка изменения валюты при редакции и создании нового вида цен.</li>
+                        <li>Исправлена блокировка отдельных элементов форм в зависимости от возможности их редактирования.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+            
+            <!--0.5.3-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.3</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">15.03.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                    <li>Справочник видов цен.</li>
+                    <li>Раздел ценообразование.</li>
+                    <li>Группировка в справочниках материалов и товаров.</li>
+                    <li>Сохранение документов в файлы .xls:</li>
+                        <ul>
+                        <li>приходные накладные по материалам и товарам;</li>
+                        <li>акты списания по материалам и товарам;</li>
+                        <li>расходные накладные в "Продажах";</li>
+                        <li>счет на оплату по расходной накладной.</li>
+                            </ul>
+                    <li>Добавлен детальный отчет “Взаимоотношение с Опт-Украина” по выбранной фирме.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Изменена форма обработки платежей.</li>
+                        <li>Переделан выбор цены товара при оформлении накладной.</li>
+                        <li>Изменен справочник материалов.</li>
+                        <li>Изменен справочник товаров.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>В основной форме платежей исправлена фильтрация.</li>
+                        <li>Исправлено неправильное отображение суммы в платежах с не основной валютой.</li>
+                        <li>Исправлено сохранение настроек для открытых закладок, при выходе из программы.</li>
+                        <li>В форме оформления накладной исправлено неправильное отображение товарных остатков.</li>
+                        <li>Исправлено блокирование форм производства, поставки материалов и товаров при продаже  или использовании товара.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
+            </div>
+
+            <!--0.5.2-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.5.2</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">6.03.2017</div>
+                </div>
+            </div>
+
+            <div class="row">                
+                <div class="col-md-4">
+                    <div class="release_add">Добавлено</div>
+                    <ul>
+                    <li>Возможность редактирования заявок.</li>
+                    <li>В форме “Заявки” добавлено поле “Комментарий менеджера”.</li>
+                    <li>В формах “Заявки” и “Накладной” добавлена кнопка для просмотра истории покупок клиента.</li>
+                    <li>В общей таблице заявок добавлен столбец “Заказанные товары”.</li>
+                    <li>В основных формах введено сохранение установленной ширины колонок.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_edit">Изменено</div>
+                    <ul>
+                        <li>Оконный режим частично заменен на документальный.</li>
+                        <li>Убраны лишние виды платежей.</li>
+                        <li>Укорочен процесс обработки заявки.</li>
+                        <li>Изменена форма регистрации новых платежей.</li>
+                        <li>Скорректировано отображение финансовых операций.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Исправлено неверное отображение баланса по счетам в “Финансовых операциях”.</li>
+                        <li>Исключена возможность изменения вида склада, если склад уже был использован.</li>
+                        <li>Исправлен поиск остатков товарных запасов при обработке заказа в “Накладной”.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
             </div>    
 
-        <!--0.5.16-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.16</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">2.09.2017</div>
-            </div>
-        </div>
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Фильтрация и сортировка документов. Позволяет установить сортировку
-                        и фильтровать документы по ключевым параметрам. Введено во всех разделах, программа запоминает 
-                        последнее состояние.</li>
-                    <li>Добавлена функция предпросмотра и печати расходных накладных и платежных документов.</li>
-                    <li>Добавлен справочник рекламных средств (используется в персональной карточке клиента).</li>
-                </ul>
+            <!--0.4-->
+            <div class="row">
+                <div class="col-md-2 col-md-offset-5">
+                    <div class="release_version" align="center">v 0.4</div>
+                </div>
+                <div class="col-md-3 col-md-offset-2">
+                    <div class="release_date">16.02.2017</div>
+                </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Изменены предустановленные названия файлов при сохранении документов в *.pdf или *.xls.</li>
-                    <li>Увеличены размеры техстовых полей.</li>
-                    <li>Изменены ценовые модификаторы. Теперь можно вводить дробные значения.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Внесены корректировки в функцию резервного копирования базы данных.</li>                        
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div>
-
-        <!--0.5.15-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.15</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">27.08.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Редактор групп.</li>
-                    <li>Управление закупками.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Полностью переработаны заказы поставщикам.</li>
-                    <li>Изменен порядок создания самостоятельных расходных накладных, добавлен этап автоматического создания и привязки листа доставки товара.</li>
-                    <li>Изменены правила удаления расходных накладных. Теперь при удалении основного документа, привязанные документы также полностью удаляются.</li>
-                    <li>В разделе Производство изменена работа со спецификациями.</li>
-                    <li>Изменен порядок подтверждения заявкой от покупателей. Теперь первым этапом подтверждения заявки является выбор склада списания товара.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>В финансовых операциях исправленл управление основной таблицей через клавиатуру.</li>
-                    <li>Исправлен финансовый отчет "Изъятия".</li>
-                    <li>Исправлены отчеты в разделе Продаж. Добавлены итоговы строки.</li>
-                    <li>В форме Платежа исправлен пересчет суммы. При изменении счета и соответственно валюты, сумма не пересчитывалась.</li>
-                    <li>Внесены исправления в форму ведомости Заработной платы. После формирования документа, боковая функциональная панель не активировалась.</li>
-                    <li>Внесены изменения в работу учет Производства. При создании отчета через спецификацию программа иногда добавляла строки с нулевым количеством.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div>
-
-
-        <!--0.5.14-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.14</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">06.07.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>В функцию “Учет заработной платы” добавлена возможность сохранить ведомость в формате Excel (xlsx).</li>
-                    <li>Введена новая система логирования событий.</li>
-                    <li>В административной панели добавлена форма поиска по событиям и активности пользователей (тестовый режим).</li>
-                    <li>Добавлен Spashscreen и иконка программы :)</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>В общих отчетах о взаиморасчетах добавлены итоговые строки.</li>
-                    <li>Открыта возможность установки произвольной суммы по расходной накладной при привязке платежки.</li>
-                    <li>В "Заявках" добавлена возможность отменить решение об отклонении заявки.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Функция резервного копирования базы данных - не все таблицы сохранялись корректно.</li>
-                    <li>В расходной накладной исправлен переход к возвратной накладной - был заблокирован.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div>
-
-        <!--0.5.13-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.13</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">29.06.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Учет заработной платы.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Доступ с платежным документам.</li>
-                    <li>Открыта возможность установки произвольной суммы по расходной накладной при привязке платежки.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Сохранение изменения суммы платежа.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" nonshade></div>
-        </div>
-
-        <!--0.5.12-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.12</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">20.06.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Добавлен виджет “Платежей документа” позволяющий из конкретного документа просматривать, 
-                        добавлять и управлять произвольным количеством привязанных платежей.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Глобально изменено обновление форм при нажатии F5.</li>
-                    <li>Переработана регистрация контрагентов и изменена форма ввода.</li>
-                    <li>Полностью изменена система управления настройками в части 
-                        поведения и размещения окон и состава основных таблиц.</li>
-                    <li>Из форм оформления и управления платежей убрана строка “Способ оплаты”.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>В расходных накладных и листе доставки исправлено автоматическое заполнение 
-                        адресов и данных клиента.</li>
-                    <li>Исправлена функция обновления в финансовых операциях и платежах 
-                        (с v0.5.6 данные сбивались в первоначальное положение).</li>
-                    <li>В форме платежа исправлена блокировка документа (при открытии завершенной 
-                        сделки документ не блокировался).</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.11-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.11</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">7.06.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Трекинг “Новой Почты”.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Информер валют и режим его работы.</li>
-                    <li>Лист доставки.</li>
-                    <li>Отчеты: истории товара, общий по продажам, себестоимости.</li>
-                    <li>Изменен порядок оформления документов продажи, в разделе фестивали.</li>
-                    <li>Изменен порядок оформления возвратов товара.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>В расходный накладных исправлен контроллер статуса документа, 
-                        теперь он работает не только в открытом документе, а и при закрытом документе.</li>
-                    <li>Исправлена форма выбора материалов и товаров при оформлении отчета производства.</li>
-                    <li>Исправлено сохранение карточки владельца (не сохранялось).</li>
-                    <li>Исправлено сохранение цен в прайс-листах (после v 0.5.10 не сохранялось).</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.10-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.10</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">25.05.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Справочник “Артикулы”.</li>
-                    <li>Выгрузка частных клиентов в файл Excel.</li>
-                    <li>В карточку клиента добавлена кнопка отображение информации об истории покупок.</li>
-                    <li>Отчет “Розничные каналы”.</li>
-                    <li>Отчет “Продажи магазинов”.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Общие отчеты о движении материалов и товаров (добавлен учет разукомплектации).</li>
-                    <li>Детальные отчеты о движении в разделе Материалы и Товары будут удалены (слишком широкий). 
-                        Вместо них в каждый раздел добавлены отчеты “Поступление” и “Выбытие”.</li>
-                    <li>Для увеличения скорости загрузки прайс-листов изменен порядок загрузки и отображения (тест).</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Сохранение адреса в карточке “Контрагента” и “Клиента”.</li>
-                    <li>Логирование в Собственных заявках и Разукомплектации.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.9-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.9</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">22.05.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Поле “Город” и “Страна” в карточку клиента и фирмы.</li>
-                    <li>поле “Город” и “Страна” в заявку.</li>
-                    <li>Поле “Треко” в заявках.</li>
-                    <li>Контекстный поиск (по первым символам) во все выпадающие списки.</li>
-                    <li>Учет собственных заявок на закупку материалов и товаров.</li>
-                    <li>Вид контрагентов “Фестивали, Ярмарки”.</li>
-                    <li>Учет продаж на выездных мероприятиях выставках, ярмарках (Фестивали).</li>
-                    <li>Учет возврата непроданных товаров на выездных мероприятиях.</li>
-                    <li>Учет отчетов по разукомплектации товаров.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Фильтрация заявок по дате (Новые сверху).</li>
-                    <li>Порядок отображения счетов (в алфавитном порядке.</li>
-                    <li>Добавлены поля в таблице "Клиенты".</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Ошибка при фильтрации “Отчетов производства” по дате.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.8-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.8</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">19.04.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-5 col-md-offset-1">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Колонка реклама в таблице частных клиентов.</li>
-                    <li>Тестовые информеры по продажам на дашбоард.</li>
-                    <li>Информер валютных курсов, с возможностью обновление справочника валют.</li>
-                </ul>
-            </div>
-            <div class="col-md-5">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Исправлено создание и сохранение в Excel частичных "входящих платежей".</li>
-                    <li>Исправлена ошибка отображения словаря “Объектов” в форме спецификации.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-         <!--0.5.7-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.7</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">10.04.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-5 col-md-offset-1">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Возможность назначать нескольких ответственных за один счет.</li>
-                    <li>Возможность добавлять несколько платежей к одной накладной.</li>                        
-                </ul>
-            </div>
-            <div class="col-md-5">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Исправлена ошибка обработки заявок.</li>
-                    <li>Исправлено сохранение документов в Excel.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.6-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.6</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">6.04.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-5 col-md-offset-1">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Отображение колонок в форме “Виды цен”.</li>                        
-                </ul>
-            </div>
-            <div class="col-md-5">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Изменена политика блокировки функций в зависимости от прав пользователей.</li>
-                    <li>Изменен отчет “Изъятие средств”.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.5-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.5</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">30.03.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-6 col-md-offset-3">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Ошибка блокировки платежного документа.</li>                        
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.4-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.4</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">27.03.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Добавлена группировка в разделах контрагентов.</li>
-                    <li>Добавлена позиция "Реклама" в карточку клиента.</li>
-                    <li>Добавлены подсказки ко всем кнопками боковых панелей.</li>
-                    <li>Возможность сохранения результатов отчетов в PDF.</li>
-                    <li>Возможность распечатки результатов отчетов.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Отображение результатов при формировании отчетов.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Исправлена критическая ошибка, возникающая при изменении склада в накладной.</li>
-                    <li>Исправлена блокировка изменения валюты при редакции и создании нового вида цен.</li>
-                    <li>Исправлена блокировка отдельных элементов форм в зависимости от возможности их редактирования.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-        
-        <!--0.5.3-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.3</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">15.03.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                <li>Справочник видов цен.</li>
-                <li>Раздел ценообразование.</li>
-                <li>Группировка в справочниках материалов и товаров.</li>
-                <li>Сохранение документов в файлы .xls:</li>
+            <div class="row">                
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="release_add">Добавлено</div>
                     <ul>
-                    <li>приходные накладные по материалам и товарам;</li>
-                    <li>акты списания по материалам и товарам;</li>
-                    <li>расходные накладные в "Продажах";</li>
-                    <li>счет на оплату по расходной накладной.</li>
-                        </ul>
-                <li>Добавлен детальный отчет “Взаимоотношение с Опт-Украина” по выбранной фирме.</li>
-                </ul>
+                        <li>Поле "Назначение платежа" в форму создания платежей.</li>                        
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <div class="release_fix">Исправлено</div>
+                    <ul>
+                        <li>Проблема сохранения материалов спецификациях.</li>
+                        <li>Отсутствие счетов при создании произвольных платежей.</li>
+                        <li>Отображение комментариев в форме заявки.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
             </div>
 
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Изменена форма обработки платежей.</li>
-                    <li>Переделан выбор цены товара при оформлении накладной.</li>
-                    <li>Изменен справочник материалов.</li>
-                    <li>Изменен справочник товаров.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>В основной форме платежей исправлена фильтрация.</li>
-                    <li>Исправлено неправильное отображение суммы в платежах с не основной валютой.</li>
-                    <li>Исправлено сохранение настроек для открытых закладок, при выходе из программы.</li>
-                    <li>В форме оформления накладной исправлено неправильное отображение товарных остатков.</li>
-                    <li>Исправлено блокирование форм производства, поставки материалов и товаров при продаже  или использовании товара.</li>
-                </ul>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-        <!--0.5.2-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.5.2</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">6.03.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-4">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                <li>Возможность редактирования заявок.</li>
-                <li>В форме “Заявки” добавлено поле “Комментарий менеджера”.</li>
-                <li>В формах “Заявки” и “Накладной” добавлена кнопка для просмотра истории покупок клиента.</li>
-                <li>В общей таблице заявок добавлен столбец “Заказанные товары”.</li>
-                <li>В основных формах введено сохранение установленной ширины колонок.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_edit">Изменено</div>
-                <ul>
-                    <li>Оконный режим частично заменен на документальный.</li>
-                    <li>Убраны лишние виды платежей.</li>
-                    <li>Укорочен процесс обработки заявки.</li>
-                    <li>Изменена форма регистрации новых платежей.</li>
-                    <li>Скорректировано отображение финансовых операций.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Исправлено неверное отображение баланса по счетам в “Финансовых операциях”.</li>
-                    <li>Исключена возможность изменения вида склада, если склад уже был использован.</li>
-                    <li>Исправлен поиск остатков товарных запасов при обработке заказа в “Накладной”.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>    
-
-        <!--0.4-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5">
-                <div class="release_version" align="center">v 0.4</div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-                <div class="release_date">16.02.2017</div>
-            </div>
-        </div>
-
-        <div class="row">                
-            <div class="col-md-5 col-md-offset-1">
-                <div class="release_add">Добавлено</div>
-                <ul>
-                    <li>Поле "Назначение платежа" в форму создания платежей.</li>                        
-                </ul>
-            </div>
-            <div class="col-md-5">
-                <div class="release_fix">Исправлено</div>
-                <ul>
-                    <li>Проблема сохранения материалов спецификациях.</li>
-                    <li>Отсутствие счетов при создании произвольных платежей.</li>
-                    <li>Отображение комментариев в форме заявки.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3"><hr color="grey" size="4" noshade></div>
-        </div>
-
-    </div>
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.js"></script>
+    </body>
 </html>

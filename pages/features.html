@@ -1,60 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta http-equip="Content-Tipe" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equip="Content-Tipe" content="text/html; charset=UTF-8"/>        
+        
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <title>Особенности приложения toCase</title>
         <meta name="description" content="Описание возможностей и особенности приложения управления хозяйственной деятельностью toCase"/>
+
+        <!-- Bootstrap CSS -->               
         <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-theme.css" rel="stylesheet">
+        
+        <!-- toCase CSS -->
         <link href="../css/tocase.css" rel="stylesheet">
-        <script src="../js/jquery.js"></script>
-        <script src="../js/bootstrap.js"></script>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101952073-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <meta name="google-site-verification" content="pugcoSGBKTjnfWA9u-mBfpePrhhiZCjxr1twUth3Ung" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101952073-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  gtag('config', 'UA-101952073-1');
-</script>
-
+            gtag('config', 'UA-101952073-1');
+        </script>
     </head>
     <body>
-        <div class="container-fluid">
-            
+        <div class="container-fluid">            
             <!--header-->
-            <div class="row">
-                <header class="col-md-4">
-                    <nav>
-                        <a class="m" href="#" align="center">Features</a>
-                        <a class="m" href="releases.html" align="center">Release Notes</a>
-                        <a class="m" href="downloads.html" align="center">Download</a>
-                    </nav>
-                </header>
-                <header class="col-md-2 col-md-offset-1">
-                    <nav>
-                        <a href="../index.html"><img src="../img/about.png" swidth="48" height="48" alt="toCase"></a>
-                    </nav>
-                </header>
-                <header class="col-md-4 col-md-offset-1">
-                    <nav>
-                        <a class="m" href="help.html" align="center">Help</a>                        
-                        <a class="m" href="contact.html" align="center">Contact</a>                        
-                        <a class="m" href="about.html" align="center">About</a>
-                    </nav>
-                </header>            
-            </div> 
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">toCase</a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Особенности</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="releases.html">Release Notes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="downloads.html">Скачать</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="help.html">Помощь</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">О проекте</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </nav>
             
-            <!--body-->
+            <!--body --
+          //  <h1 align="center">Особенности toCase :)</h1> -->
             <div class="row">
-                <div  class="col-md-12">
-                    <div class="t">
-                        Features
+                <div class="fea_box" id="1">
+                    <div class="col-md-8">
+                        <dl>
+                            <dt>Управление складом</dt>
+                            <dd>Произвольное количество складов</dd>
+                            <dd>Разделение учета на товарный и материальный</dd>
+                            <dd>Учет поступления материалов (формирование документов, контроль оплаты, 
+                                сохранение в файл)</dd>
+                            <dd>Акты списания</dd>
+                            <dd>Передача материальных ценностей между складами</dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1">
+                        <img src="../img/warehouse.png" alt="Склады" width="250" height="250">
                     </div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="fea_box" id="2">
+                    <div class="col-md-2 col-md-offset-1">
+                            <img src="../img/buydoc.png" alt="Управление закупками" width="250" height="250">
+                    </div>
+                    <div class="col-md-8 col-md-offset-1">
+                        <dl>
+                            <dt>Управление закупками</dt>
+                            <dd>Формирование заявок поставщикам</dd>
+                            <dd>Мониторинг выполнения поставок</dd>
+                            <dd>Контроль оплаты, отчеты взаиморасчетов</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="fea_box">
+                    <div class="col-md-8">
+                        <dl>
+                            <dt>Производство</dt>
+                            <dd>Разделение учета производства по видам продукции (полуфабрикаты, товары)</dd>
+                            <dd>Использование спецификаций и справочника работ</dd>
+                            <dd>Подготовка документации (отчеты производства, акты выполненных работ, расход материалов) </dd>
+                            <dd>Разукомплектация товаров</dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1">
+                        <img src="../img/manufacturing.png" alt="Производство" width="250" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="fea_box" id="2">
+                    <div class="col-md-2 col-md-offset-1">
+                            <img src="../img/sales.png" alt="Управление закупками" width="250" height="250">
+                    </div>
+                    <div class="col-md-8 col-md-offset-1">
+                        <dl>
+                            <dt>Продажи</dt>
+                            <dd>Учет заявок оптовых и розничных покупателей</dd>
+                            <dd>Мониторинг эффективности источников привлечения</dd>
+                            <dd>Формирования расходных накладных, привязка платежей</dd>
+                            <dd>Оптравка клиенту документов по е-mail</dd>
+                            <dd>Оформление возвратов</dd>
+                            <dd>Работа с прайслистами</dd>
+                            <dd>Отчеты о продажах и взаиморасчетах с оптовыми покупателями</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="fea_box">
+                    <div class="col-md-8">
+                        <dl>
+                            <dt>Финансы</dt>
+                            <dd>Работа с несколькими валютами</dd>
+                            <dd>Произвольное кол-во счетов у каждого пользователя</dd>
+                            <dd>Учет внутренних операций (пополнение, списание и перемещение средств)</dd>
+                            <dd>Операции с контрагентами</dd>                            
+                        </dl>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1">
+                        <img src="../img/finance.png" alt="Финансы" width="250" height="250">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="fea_box" id="2">
+                    <div class="col-md-2 col-md-offset-1">
+                            <img src="../img/dop.png" alt="Дополнительные функции" width="250" height="250">
+                    </div>
+                    <div class="col-md-8 col-md-offset-1">
+                        <dl>
+                            <dt>Дополнительные функции</dt>
+                            <dd>Более 40 предустановленных отчетов</dd>
+                            <dd>Печать, отправка по e-mail и сохранение документов в файл</dd>
+                            <dd>Логирование действий пользователей</dd>
+                            <dd>Разделение прав пользователей</dd>
+                            <dd>Резервное копирование данных</dd>
+                            <dd>Упрощенный модуль формирования заработной платы</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.js"></script>
     </body>
 </html>

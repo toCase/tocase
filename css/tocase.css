@@ -1,9 +1,6 @@
-nav{
-    width: 100%;
-    height: 30px;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 30px;
+body{
+    color: rgb(18, 32, 58);
+    
 }
 p{
     padding: 5px;
@@ -21,7 +18,6 @@ p{
 }
 .t{    
     width: 18em;
-    font-size: 28pt;
     font-weight: bold;
     color: rgba(95, 140, 45, 0.9);
 }
@@ -49,7 +45,7 @@ video{
     text-align: center;
     font-size: 19pt;
     font-weight: bold;
-    color: rgb(122, 217, 255);
+    color: rgb(4, 82, 112);
 }
 
 .release_date{     
@@ -66,20 +62,67 @@ video{
 }
 
 .release_add{    
-    color: rgb(122, 255, 161);
+    color: rgb(17, 122, 47);
 }
 
 .release_edit{
-    color: rgb(255,228,122);
+    color: rgb(219, 170, 10);
 }
 .release_fix{
-    color: rgb(255,160,122);
+    color: rgb(211, 85, 35);
 }
 
 .release_del{
-    color: rgb(255,122,151);
+    color: rgb(238, 1, 21);
 }
 .writer{
     height: 50px;
     border-bottom: 1px solid black;
 }
+.jumbotron {
+    background-color: rgba(107, 238, 55, 0.603);
+    background: url("../img/dia3r.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .inner {
+    padding: 2rem;
+    text-align: center;
+  }
+  .fea_box{
+    height: 300px;
+    line-height: 2;
+    padding: 30px;
+  }
+  dl {
+      align-content: center;
+  }
+  dt {      
+      text-align: center;
+      font-size: 22px;
+      margin: 20px;
+  }
+  dd {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  th {
+      text-align: center;
+      font-size: 17pt;
+  }
+  td {
+    text-align: center;
+    font-size: 13pt;
+}
+h1{
+    line-height: 2;
+    text-align: center;
+}
+
