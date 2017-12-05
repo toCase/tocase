@@ -1,7 +1,9 @@
-body{
-    color: rgb(18, 32, 58);
+#mainBody{
+    background-color: rgb(72, 129, 235);
+    color: rgb(252, 253, 196)
     
 }
+
 p{
     padding: 5px;
 }
@@ -80,11 +82,8 @@ video{
     border-bottom: 1px solid black;
 }
 .jumbotron {
-    background-color: rgba(107, 238, 55, 0.603);
-    background: url("../img/dia3r.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-color: rgb(72, 129, 235);
+    
   }
   .mastfoot {
     position: fixed;
